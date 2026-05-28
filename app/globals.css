@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --font-playfair: 'Playfair Display', Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-charcoal text-white antialiased;
+  font-family: var(--font-inter);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-playfair);
+}
+
+@layer utilities {
+  .gold-line {
+    @apply w-12 h-0.5 bg-gold;
+  }
+  .section-label {
+    @apply text-gold text-xs uppercase tracking-[0.2em] font-medium;
+  }
+}
